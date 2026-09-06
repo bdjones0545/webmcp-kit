@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-import { registerWebMcpTools, type WebMcpRuntimeConfig, type WebMcpTool } from "./runtime";
+import { registerWebMcpTools, type WebMcpRuntimeConfig, type WebMcpTool } from "./runtime.js";
 
 /**
  * Register a set of WebMCP tools for the lifetime of the calling component.

@@ -19,7 +19,7 @@ import {
   defineReadOnlyTool,
   registerWebMcpTools,
   type WebMcpTool,
-} from "../src/runtime";
+} from "../src/runtime.js";
 
 type RegisterCall = { tool: WebMcpTool; signal: AbortSignal | undefined };
 

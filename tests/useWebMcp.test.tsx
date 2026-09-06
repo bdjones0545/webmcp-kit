@@ -9,8 +9,8 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { cleanup, render } from "@testing-library/react";
 
-import { defineReadOnlyTool, type WebMcpTool, type WebMcpRuntimeConfig } from "../src/runtime";
-import { useWebMcpTools } from "../src/useWebMcp";
+import { defineReadOnlyTool, type WebMcpTool, type WebMcpRuntimeConfig } from "../src/runtime.js";
+import { useWebMcpTools } from "../src/useWebMcp.js";
 
 type RegisterCall = { tool: WebMcpTool; signal: AbortSignal | undefined };
 

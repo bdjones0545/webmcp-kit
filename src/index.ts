@@ -4,5 +4,5 @@ export {
   type ReadOnlyToolSpec,
   type WebMcpRuntimeConfig,
   type WebMcpTool,
-} from "./runtime";
-export { useWebMcpTools } from "./useWebMcp";
+} from "./runtime.js";
+export { useWebMcpTools } from "./useWebMcp.js";
