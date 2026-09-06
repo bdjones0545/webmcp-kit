@@ -22,7 +22,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "prepare": "npm run build"
   },
   "peerDependencies": {
     "@mcp-b/webmcp-types": "5.0.1",
