@@ -16,4 +16,6 @@ jobs:
       - run: npm ci
       - run: npm run typecheck
       - run: npm test
-      - run: npm run build
+      # dist/ is committed so consumers never need an install-time build.
+      # Fail if it has drifted from src.
+      - run: npm run verify:dist

@@ -58,6 +58,23 @@ third argument — the one API change in this extraction.
 +useWebMcpTools(buildChelCoachTools, snapshot, webMcpConfig());
 ```
 
+## Installing
+
+These repos are private and this is not on a registry, so apps depend on it by
+git URL:
+
+```
+npm install github:bdjones0545/webmcp-kit
+pnpm add github:bdjones0545/webmcp-kit
+```
+
+`dist/` is **committed**, so installing runs no lifecycle script. That matters:
+`jaspicon` is a pnpm workspace with `minimumReleaseAge` and an
+`onlyBuiltDependencies` allowlist, and a package that needed a build on install
+would either be blocked there or force a hole in that policy. CI runs
+`verify:dist`, which rebuilds and fails if the committed output has drifted from
+`src/` — mutation-checked by editing a source file and confirming it goes red.
+
 ## Verification
 
 `npm run typecheck && npm test && npm run build` — 23 tests, all green, under

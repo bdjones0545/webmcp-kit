@@ -23,7 +23,7 @@
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "prepare": "npm run build"
+    "verify:dist": "npm run build && git diff --exit-code -- dist"
   },
   "peerDependencies": {
     "@mcp-b/webmcp-types": "5.0.1",
