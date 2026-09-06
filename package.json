@@ -1,0 +1,44 @@
+{
+  "name": "@bdjones/webmcp-kit",
+  "version": "0.1.0",
+  "description": "Shared WebMCP runtime: read-only tool registration, feature-flagged polyfill loading, and a React hook.",
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "templates",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@mcp-b/webmcp-types": "5.0.1",
+    "react": ">=18"
+  },
+  "optionalDependencies": {
+    "@mcp-b/global": "5.0.1"
+  },
+  "devDependencies": {
+    "@mcp-b/global": "5.0.1",
+    "@mcp-b/webmcp-types": "5.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/react": "^19.2.0",
+    "jsdom": "^30.0.1",
+    "react": "^19.2.7",
+    "typescript": "^6.0.3",
+    "vitest": "3.2.7"
+  }
+}
